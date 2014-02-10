@@ -1,0 +1,91 @@
+
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" ng-app="inspiration" >
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angular Kudos</title>
+
+    
+    <meta name="description" content="angular-kudos ." />
+    
+    
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/kudos.css" />
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <script src="js/modernizr.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/ngStorage.min.js"></script>
+    <script src="js/angular-kudos.js"></script>
+    <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js"></script>
+    <style type="text/css">
+    .header-line{
+      border-bottom: 2px solid red;
+      margin-bottom: 1.25rem;
+    }
+    body{
+      background-color: #F2EDE0;
+    }
+    .pad-bottom{
+      padding-bottom: 5px;
+    }
+    
+    a{
+      color:black;
+    }
+    </style>
+    
+  </head>
+  <body>
+    
+
+ <!-- Header and Nav -->
+
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="header-line">
+        <h1>Inspiration</h1>
+      </div>
+    </div>
+  </div>
+  <!-- End Header and Nav -->
+  <div class="row">
+ <!-- Nav Sidebar -->
+    <!-- This is source ordered to be pulled to the left on larger screens -->
+    <div class="large-3 columns ">
+     
+        <h5><a href="#"><i class="fa fa-github-alt"></i> View on Github</a></h5>
+        <h5><a href="http://twitter.com/oojx"><i class="fa fa-twitter"></i> @oojx</a></h5>
+      
+    </div>
+   
+    <div class="large-9 columns" ng-controller="MainCtrl">
+      <div ng-repeat="quote in quotes">
+      <div class="row pad-bottom" >
+        <div class="large-2 columns small-6">
+          <div og-kudos
+               og-kudos-id="{{quote.id}}"
+               og-kudos-count="{{quote.kudos}}"
+               og-kudos-done="addCount(quote.id)">
+               
+          </div>
+        </div>
+        <div class="large-10 columns small-6">
+          <blockquote>
+          <p>{{quote.quote}}
+          <cite>{{quote.author}}</cite></p>
+          </blockquote>
+        </div>
+      </div>
+      <!-- End Feed Entry -->
+      
+      <hr />
+    </div>
+    </div>
+  
+  
+  </body>
+</html>
