@@ -76,9 +76,9 @@ an example controller that has  `angular-kudos` and `firebase` as a dependency c
 
 ## Credits
 
-@dcurtis for kudos
-https://github.com/masukomi/kudos
-https://github.com/gsklee/ngStorage
+- @dcurtis for kudos
+- https://github.com/masukomi/kudos
+- https://github.com/gsklee/ngStorage
 
 
 
