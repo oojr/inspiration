@@ -69,7 +69,7 @@ You can pass in a function for when a kudos action is complete with this attribu
 ```
 ##  Controller
 
-an example controller that has  `angular-kudos` and `firebase` as a dependency can be found [here](http://github.com/oojr/inspiration)
+an example controller that has  `angular-kudos` and `firebase` as a dependency can be found [here](https://github.com/oojr/inspiration/blob/master/js/app.js)
 
 
 
